@@ -1,48 +1,100 @@
+- [USER AUTHENTICATION MECHANISM FOR TECH HEADS PROJECT ON ONLINE MARKETTING FOR ELECTRONICS](#user-authentication-mechanism-for-tech-heads-project-on-online-marketting-for-electronics)
+  - [Modules Explanation](#modules-explanation)
+  - [1. REGISTRATION SYSTEM](#1-registration-system)
+    - [a). Database Table](#a-database-table)
+    - [b). Config file](#b-config-file)
+    - [c). Registration Form](#c-registration-form)
+  - [2.LOGIN SYSTEM](#2login-system)
+    - [a). Creating a Login Form](#a-creating-a-login-form)
+    - [b). Creating a Welcome Page](#b-creating-a-welcome-page)
+  - [LOGOUT](#logout)
+    - [c). Creating a Logout Script](#c-creating-a-logout-script)
+  - [PASSWORD RECOVERY](#password-recovery)
+    - [d). Adding a Password Reset Feature](#d-adding-a-password-reset-feature)
 
-# 1) Introduction
+# USER AUTHENTICATION MECHANISM FOR TECH HEADS PROJECT ON ONLINE MARKETTING FOR ELECTRONICS
 
-# 2) Acknowledgement
+This documentation is about implementing user's authentication mechanism for Online marketting for electronics.
+User Authentication is a security mechanism used to restrict unauthorized access to member only areas and tools on a given site.
+Various considerations are followed when developing a user authentication mechanism.
+In our project, we considered creating the mechanism by using certain modules. This modules include:
 
-# 3) Objectives
+1. Registration System.
+2. Login System
+3. Logout Script
+4. Password Reset Feature.
 
-# 4) The_User_of_the_system-
+Several programming tools are used whencoming up with the system. Tech heads project for user authentication mechanism will use:
 
-[](#)
+1. PHP
+2. MYSQL
+3. HTML
+4. CSS
+5. Bootstrap.
 
-- [1) Introduction](#1-introduction)
-- [2) Acknowledgement](#2-acknowledgement)
-- [3) Objectives](#3-objectives)
-- [4) The_User_of_the_system-](#4-the_user_of_the_system-)
-  - [1). Introduction](#1-introduction-1)
-  - [2) Acknowledgment](#2-acknowledgment)
-  - [3). Ojectives](#3-ojectives)
-  - [4). Users of the system](#4-users-of-the-system)
+After the login system is succesfully built, a welcome page will be displayed to the user on the screen once they login to their respective accounts.
+Users will be able to surf through the products and select their preferred products. After they are done with placing their orders and payments are made, they can log out of the system and they will be redirrected to the browser's home page.
 
-## 1). Introduction
+## Modules Explanation
 
-This project is web based shopping system for an electronic shopping system. The project  objectives is to deliver the online shopping website for cross platform devices.
-Online shopping is the process whereby consumers directly buy goods or services from a seller in real-time, without any intermediary service over the internet. It is a form of electronic commerce. This project is an attempt to provide the advantages of online shopping to customers of a real shop. It helps buying the products in the shop anywhere through the internet by using an android device.Thus the customer will get the service of online shopping and home delivery from his favourite shop.
+The following discussion is about the procedure we'll be using to create the modules to their implementation finally to deployment.
 
-## 2) Acknowledgment
+## 1. REGISTRATION SYSTEM
 
-We take this occasion to thank God, the almighty for blessing us with his grace and taking our endeavor to a successful cumination. We extend our sincere and heartfelt thanks to our, esteemed guide, Mr Felix Weru for providing us with the right guidance and advice at the crucial junctures and for showing us the right way.
-I would also like to thank the group members of Tech heads for the support and encouragment we have given each other during the project research to deployment.
+This section will allow new users to create a new accouns by filling out their credentials to the website account creation page.
+They will be able to fill in their credentials and a table will be created automatically by the sytem.
 
-## 3). Ojectives
+Their are different sub-modules under the Registration system module.
 
-The objectives of this organization is to come up with an online Marketing System for Electronics.
+### a). Database Table
 
-Once the system is deployed, users will be able to create accouunts by filling their registration forms, Login to their respective accounts using passwords created, surf through the website, select their preferred electronic items and order them. The order process will be complete once the user pays for the product.
+A  database trable is file that will store users details in the background. It will hold all the user data once they create their respective account in the Online Electronic System. SQL will majorly be used to create the table inside the MYSQL database. 
 
-The system will be able to allow the user to select their point of delivery. The products will be delivered to the customer pat their selected dstination and a receipt for their products will be issued in hard copy.  The user will be required to give their feedback on the functionality of the system and give their ratings.
+During registering, users will be required to fill their details beginning with their  first and last names, username for the site, their emails, phone numbers, location, age(18+) and ofcourse their account password.
 
-A different module will also be created where the user will also fill a text box to about the changes that need to be made for the betterment of the system.This text-box will also include user compliments and complains about the system.
+### b). Config file
 
-After the user is done with placing orders and other requirements, they will be able to sign out till their next visit.
+After the table is created, a PHP script is needed in order to connect MYSQL database server.
+We will create a file then place a code iside. The file's name will be "config.php".
 
-Moreover, on the next sign in incase the user has forgotten the password, they will be able to recover their passwords using their email accounts. They can change their passwords so that they dont forget on their next visit.
+Data will be placed according to the MYSQL server settings. We will name our database as Online shop for electronics.
 
-## 4). Users of the system
+### c). Registration Form
 
--1.Admin
--2.Customers
+On the registration form, a different PHP file named "register.php" will be created. We will come up with a code that will create a web form that allows user to register themselves succesfully.
+
+For users to ensure their accounts are secured, a PHP's inbuilt "password_hash() function is used to create a password hash from the password string entered by the user using a process called salting. 
+This function creates a password hash using one-way hashing algorithm. This means that if two or more users has the same password, their password hashess are different and they will be able to access their accounts without inconviniences.
+
+During login, the system will verify the given passwords with hash password stored in database using PHP passord_verify() function.
+Password salting is a technique used to widely secure paswwords by randomizing the password hashes.
+
+## 2.LOGIN SYSTEM
+
+The user will be able to enter either their passwords or emails and then passwords to be granted authority to access their account. When the submit their forms, their inputs will be verified against the credentials stored in database. If username or email matches their password, they will be authorized and granted to access their site, otherwise, logi attempt will be rejected.
+
+Creating a login system has sub modules will be followed for a succesful login site. We will be discussing the procedure below.
+
+### a). Creating a Login Form
+
+A file named "login.php" will be created. Then the login form code will be placed inside the file. Tools used in creating the form are: HTML, CSS and PHP.
+
+### b). Creating a Welcome Page
+
+A welcome page is where the user will be redirected onc they succesfully login into their account.
+We create a file named "welcome.php"
+It welcomes the user to the account for online shopping for electronics.
+
+## LOGOUT
+
+### c). Creating a Logout Script
+
+A "logout.php" file is created. This is when a user is finished with the business they were doing on the site. When they click on the logout or sighn out link, they will be redirrected back to login page and the script inside the file destroys the session.
+
+## PASSWORD RECOVERY
+
+### d). Adding a Password Reset Feature
+
+A system is much better when it has a password reset feature. This I where the account holder(user) forgets the password and they are barred from accessing their accounts. The password reset feature enables them to reset their passwords by verifying the registration details in the database. A password reset utility added will be added to our login system.
+When the feature is used, users can instantly reset their own passwords for their accounts.
+We will create a file name called "reset-password.php" then place the code inside.
