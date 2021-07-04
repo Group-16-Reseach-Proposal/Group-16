@@ -387,3 +387,33 @@ href="login.php">Login</a>
   </table>
    </form>
     </div>
+PRODUCTS MODULES 
+
+!DOCTYPE html>
+<html>
+    <head>
+        <title>online shopping
+        </title>
+        </head>
+        <body>
+            <h1> <center> PRODUCTS/PRICES MODULE FOR ONLINE SHOPPING FOR ELECTRONICS</center></h1>
+            <p>This module starts when the user visits the home page or when a user searches for a product by entering a search term. This part of the application includes displaying all the products that are available or the products that match the search term entered by the user. The user can then filter these products based on various parameters like manufacturer, product type, operating system supported or a price range. The user browse through the products and each product would be displayed with an image and its features like operating system supported, number of user licenses and if it is a full version or an upgrade version. A user can add a product to the cart either by dragging the product and dropping it in the cart or by clicking a button. The user would be able to see the shopping cart summary
+
+            </p>
+<p>This module is mainly used with the bookkeeping module –The seller can easily create offers a way from the office. Further benefit of this module is in reporting (invoices are correctly issued)
+
+</p>
+<p>The following information is contained in the product module</p>
+<h2>CATALOG MANAGEMENT</h2>
+<p>Product catalog management is a system that manages an online product catalogue of a company’s product and allows users to quickly search and find relevant products and options</p>
+<p><b>Information to be maintained for catalog management;</b></p>
+<OL>
+    <l1><br>I.Inventory management with backordered items</l1><br>
+    <l1><br>Batch updates to products</l></br>
+    <l1>Virtual products </l1>
+    </ol>
+
+        </body>
+    
+
+</html>
