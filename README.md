@@ -1,3 +1,4 @@
+
 # Order and payment module
 
 This  module is about how the user can order items put them in a cart and pay for them in an online shop.
@@ -23,4 +24,6 @@ This module starts when the user the views the shopping cart.All the items that 
  Using this the user can access information for all users who have placed order of the item in access database table which is automatically updated when place order button is clicked.After clicking the refers button on the users tab once a new user successfully regiisters that user's information is updated on the first row in the daatabase table.
 
 ### PAYMENT
+
  This interface deals with the mode of payment i.e by cash. We will extend this to credit card, debit card etc in the future.
+
